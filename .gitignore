@@ -1,0 +1,11 @@
+/assets
+/bin
+/contao-manager
+/files/content
+/system
+/vendor
+/var
+/web
+.env*
+
+!/system/config/localconfig.php

@@ -59,7 +59,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['rank'] = array(
         ),
         'Chargendienstgrade' => array(
             'LM' => 'Löschmeister (LM)',
-            'OM' => 'Oberlöschmeister (OLM)',
+            'OLM' => 'Oberlöschmeister (OLM)',
             'HLM' => 'Hauptlöschmeister (HLM)',
             'BM' => 'Brandmeister (BM)',
             'OBM' => 'Oberbrandmeister (OBM)',

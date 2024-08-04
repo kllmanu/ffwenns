@@ -7,8 +7,12 @@ use Contao\DataContainer;
 
 // columns
 $GLOBALS['TL_DCA']['tl_member']['list']['sorting']['fields'] = array('rank');
+$GLOBALS['TL_DCA']['tl_member']['list']['sorting']['flag'] = DataContainer::SORT_DESC;
 $GLOBALS['TL_DCA']['tl_member']['list']['label']['fields'] = array('rank', 'firstname', 'lastname', 'role', 'groups');
 $GLOBALS['TL_DCA']['tl_member']['list']['label']['label_callback'] = array('tl_member_extended', 'addInfo');
+
+// remove operations
+unset($GLOBALS['TL_DCA']['tl_member']['list']['operations']['su']);
 
 // remove sorting
 $GLOBALS['TL_DCA']['tl_member']['fields']['dateAdded']['sorting'] = false;
@@ -46,54 +50,54 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['rank'] = array(
     'flag'  => DataContainer::SORT_BOTH,
     'options' => array(
         'Dienstgrade der Feuerwehrjugend' => array(
-            'JFM1' => 'Jugendfeuerwehrmitglied (JFM1)',
-            'JFM2' => 'Jugendfeuerwehrmitglied (JFM2)',
-            'JFM3' => 'Jugendfeuerwehrmitglied (JFM3)',
-            'JFM' => 'Jugendfeuerwehrmitglied (JFM)',
+            '010_JFM1' => 'Jugendfeuerwehrmitglied (JFM1)',
+            '020_JFM2' => 'Jugendfeuerwehrmitglied (JFM2)',
+            '030_JFM3' => 'Jugendfeuerwehrmitglied (JFM3)',
+            '040_JFM' => 'Jugendfeuerwehrmitglied (JFM)',
         ),
         'Mannschaftsdienstgrade' => array(
-            'PFM' => 'Probefeuerwehrmann (PFM)',
-            'FM' => 'Feuerwehrmann (FM)',
-            'OFM' => 'Oberfeuerwehrmann (OFM)',
-            'HFM' => 'Hauptfeuerwehrmann (HFM)'
+            '050_PFM' => 'Probefeuerwehrmann (PFM)',
+            '060_FM' => 'Feuerwehrmann (FM)',
+            '070_OFM' => 'Oberfeuerwehrmann (OFM)',
+            '080_HFM' => 'Hauptfeuerwehrmann (HFM)'
         ),
         'Chargendienstgrade' => array(
-            'LM' => 'Löschmeister (LM)',
-            'OLM' => 'Oberlöschmeister (OLM)',
-            'HLM' => 'Hauptlöschmeister (HLM)',
-            'BM' => 'Brandmeister (BM)',
-            'OBM' => 'Oberbrandmeister (OBM)',
-            'HBM' => 'Hauptbrandmeister (HBM)'
+            '090_LM' => 'Löschmeister (LM)',
+            '100_OLM' => 'Oberlöschmeister (OLM)',
+            '110_HLM' => 'Hauptlöschmeister (HLM)',
+            '120_BM' => 'Brandmeister (BM)',
+            '130_OBM' => 'Oberbrandmeister (OBM)',
+            '140_HBM' => 'Hauptbrandmeister (HBM)'
         ),
         'Verwaltungsdienstgrade' => array(
-            'VV' => 'Verwalter (V)',
-            'VVV' => 'Verwalter (V)',
-            'OV' => 'Oberverwalter (OV)',
-            'HV' => 'Hauptverwalter (HV)',
-            'BV' => 'Bezirksverwalter (BV)'
+            '150_V2' => 'Verwalter (V2)',
+            '160_V3' => 'Verwalter (V3)',
+            '170_OV' => 'Oberverwalter (OV)',
+            '180_HV' => 'Hauptverwalter (HV)',
+            '190_BV' => 'Bezirksverwalter (BV)'
         ),
         'Offiziersdienstgrade' => array(
-            'BI' => 'Brandinspektor (BI)',
-            'OBI' => 'Oberbrandinspektor (OBI)',
-            'HBI' => 'Hauptbrandinspektor (HBI)',
-            'FARZT' => 'Feuerwehrarzt (FARZT)',
-            'FKUR' => 'Feuerwehrkurat (FKUR)',
-            'FT' => 'Feuerwehrtechniker (FT)'
+            '200_BI' => 'Brandinspektor (BI)',
+            '210_OBI' => 'Oberbrandinspektor (OBI)',
+            '220_HBI' => 'Hauptbrandinspektor (HBI)',
+            '230_FARZT' => 'Feuerwehrarzt (FARZT)',
+            '240_FKUR' => 'Feuerwehrkurat (FKUR)',
+            '250_FT' => 'Feuerwehrtechniker (FT)'
         ),
         'Höhere Offiziersdienstgrade' => array(
-            'ABI' => 'Abschnittsbrandinspektor (ABI)',
-            'BR' => 'Brandrat (BR)',
-            'OBR' => 'Oberbrandrat (OBR)',
+            '260_ABI' => 'Abschnittsbrandinspektor (ABI)',
+            '270_BR' => 'Brandrat (BR)',
+            '280_OBR' => 'Oberbrandrat (OBR)',
         ),
         'Stabsoffiziersdienstgrade' => array(
-            'LBDSTV' => 'Landesbranddirektor-Stv (LBDSTV)',
-            'LBD' => 'Landesbranddirektor (LBD)',
-            'LFARZT' => 'Landesfeuerwehrarzt (LFARZT)',
-            'LFKUR' => 'Landesfeuerwehrkurat (LFKUR)',
+            '290_LBDSTV' => 'Landesbranddirektor-Stv (LBDSTV)',
+            '300_LBD' => 'Landesbranddirektor (LBD)',
+            '310_LFARZT' => 'Landesfeuerwehrarzt (LFARZT)',
+            '320_LFKUR' => 'Landesfeuerwehrkurat (LFKUR)',
         ),
         'Dienstgrade der Feuerwehrinspektoren' => array(
-            'BFI' => 'Bezirksfeuerwehrinspektor (BFI)',
-            'LFI' => 'Landesfeuerwehrinspektor (LFI)'
+            '330_BFI' => 'Bezirksfeuerwehrinspektor (BFI)',
+            '340_LFI' => 'Landesfeuerwehrinspektor (LFI)'
         )
     ),
     'inputType' => 'select',
@@ -156,7 +160,7 @@ class tl_member_extended extends Backend
     public function addInfo($row, $label, DataContainer $dc, $args) {
 
         $options = $GLOBALS['TL_DCA']['tl_member']['fields']['rank']['options'];
-        $format = '<img src="/files/theme/images/dienstgrade/%s.SVG" width="16" height="16"> %s';
+        $format = '<img src="/files/theme/images/dienstgrade/%s.svg" width="16" height="16"> %s';
 
         foreach($options as $category => $ranks) {
             foreach($ranks as $rank => $name) {

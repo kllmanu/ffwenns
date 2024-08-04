@@ -117,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['role'] = array(
 $GLOBALS['TL_DCA']['tl_member']['fields']['image'] = array(
     'label' => array('Bild', 'Ein Profilbild hinzufügen'),
     'inputType' => 'fileTree',
-    'eval' => array('filesOnly' => true, 'fieldType' => 'radio', 'tl_class' => 'w25'),
+    'eval' => array('filesOnly' => true, 'fieldType' => 'radio', 'tl_class' => 'clr w50'),
     'sql' => "binary(16) NULL"
 );
 
@@ -147,6 +147,7 @@ PaletteManipulator::create()
 PaletteManipulator::create()
     ->addField('rank', 'firstname', PaletteManipulator::POSITION_BEFORE)
     ->addField('role', 'lastname')
+    ->addField('image', 'role')
     ->applyToPalette('default', 'tl_member');
 
 class tl_member_extended extends Backend

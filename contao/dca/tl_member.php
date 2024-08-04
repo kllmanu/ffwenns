@@ -167,13 +167,15 @@ class tl_member_extended extends Backend
 
         $groups = unserialize($row['groups']);
         $groupNames = array();
-        sort($groups);
 
-        foreach($groups as $id) {
-            $groupNames[] = MemberGroupModel::findById($id)->name;
+        if($groups && is_array($groups)) {
+
+            foreach($groups as $id) {
+                $groupNames[] = MemberGroupModel::findById($id)->name;
+            }
+
+            $args[4] = join(', ', $groupNames);
         }
-
-        $args[4] = join(', ', $groupNames);
 
         return $args;
 

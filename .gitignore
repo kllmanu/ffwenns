@@ -7,5 +7,6 @@
 /var
 /web
 .env*
+*.tar.gz
 
 !/system/config/localconfig.php

@@ -1,0 +1,10 @@
+<img src="<?= $this->image ?>">
+
+<p>
+    <strong><?= $this->name ?></strong>
+    <time><?= $this->time ?></time>
+</p>
+
+<div>
+    <?= $this->text ?>
+</div>

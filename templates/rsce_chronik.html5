@@ -1,0 +1,6 @@
+<h3><?= $this->headline ?></h3>
+
+<?php foreach($this->entries as $entry): ?>
+    <p><strong><?= $entry->name ?></strong> (<?= $entry->time; ?>)</p>
+    <p><?= $entry->description ?></p>
+<?php endforeach; ?>

@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-use App\Service\GoogleCalendarService;
+use App\Client\GoogleCalendar;
 use Contao\CalendarEventsModel;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCronJob;
 use Contao\CoreBundle\Framework\ContaoFramework;
@@ -16,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class ImportEventsCommand extends Command
 {
 
-    public function __construct(private readonly ContaoFramework $framework, private GoogleCalendarService $calendar)
+    public function __construct(private readonly ContaoFramework $framework, private GoogleCalendar $calendar)
     {
         $this->framework->initialize();
 

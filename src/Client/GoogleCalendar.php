@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Service;
+namespace App\Client;
 
 use ICal\ICal;
 
-class GoogleCalendarService
+class GoogleCalendar
 {
     private ICal $ical;
 

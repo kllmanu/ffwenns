@@ -1,0 +1,12 @@
+# config/services.yaml
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\:
+    resource: ../src
+
+  App\Service\GoogleCalendarService:
+    arguments:
+      $calendarUrl: '%env(GOOGLE_CALENDAR_URL)%'

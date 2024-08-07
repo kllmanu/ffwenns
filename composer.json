@@ -9,7 +9,8 @@
         "contao/listing-bundle": "5.3.*",
         "contao/news-bundle": "5.3.*",
         "contao/newsletter-bundle": "5.3.*",
-        "madeyourday/contao-rocksolid-custom-elements": "^2.4"
+        "madeyourday/contao-rocksolid-custom-elements": "^2.4",
+        "johngrogg/ics-parser": "*"
     },
     "extra": {
         "public-dir": "web",

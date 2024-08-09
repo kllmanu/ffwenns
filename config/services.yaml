@@ -7,10 +7,15 @@ services:
   App\:
     resource: ../src
 
-  App\Client\GoogleCalendar:
+  App\Client\GoogleCalendarClient:
     arguments:
       $calendarUrl: '%env(GOOGLE_CALENDAR_URL)%'
 
-  App\Client\Kirby:
+  App\Client\KirbyClient:
     arguments:
       $newsDir: 'aktuelles'
+
+  App\Client\FacebookClient:
+    arguments:
+      $newsDir: 'aktuelles'
+      $accessToken: '%env(FACEBOOK_ACCESS_TOKEN)%'

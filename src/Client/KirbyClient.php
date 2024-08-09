@@ -4,7 +4,7 @@ namespace App\Client;
 
 use Contao\CoreBundle\Filesystem\VirtualFilesystemInterface;
 
-class Kirby
+class KirbyClient
 {
     public function __construct(private readonly VirtualFilesystemInterface $filesStorage, readonly string $newsDir)
     {

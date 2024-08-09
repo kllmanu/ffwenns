@@ -4,7 +4,7 @@ namespace App\Client;
 
 use ICal\ICal;
 
-class GoogleCalendar
+class GoogleCalendarClient
 {
     private ICal $ical;
 

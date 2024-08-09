@@ -101,7 +101,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['rank'] = array(
         )
     ),
     'inputType' => 'select',
-    'eval' => array('chosen'=>true, 'tl_class'=>'w25'),
+    'eval' => array('chosen'=>true, 'tl_class'=>'w25', 'isAssociative' => true),
     'sql' => "varchar(255) NOT NULL default 'FM'"
 );
 

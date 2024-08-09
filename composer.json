@@ -10,7 +10,8 @@
         "contao/news-bundle": "5.3.*",
         "contao/newsletter-bundle": "5.3.*",
         "madeyourday/contao-rocksolid-custom-elements": "^2.4",
-        "johngrogg/ics-parser": "*"
+        "johngrogg/ics-parser": "*",
+        "arispati/emoji-remover": "^0.1.4"
     },
     "extra": {
         "public-dir": "web",
